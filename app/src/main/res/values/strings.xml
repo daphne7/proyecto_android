@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">prueba</string>
+    <string name="btnanterior">Anterior Pagina</string>
+    <string name="img1">imagen1</string>
+    <string name="btn">REGISTRATE AHORA</string>
+    <string name="btn2">Ya estoy registrado </string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_iniciarSesion">Registro</string>
+
+    <string name="textView">Registrate</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_apelllido">Apellidos</string>
+    <string name="txt_correo">Correo Electronico </string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="txt_password">Contraseña</string>
+
+    <string name="btn3">Aceptar</string>
+    <string name="btn4">Cancelar </string>
+
+    <string name="nombre">Nombre</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="password">Contrasena</string>
+
+    <string name="title_activity_inciar_sesion">InciarSesion</string>
+    <string name="ini_sesion">Iniciar Sesion</string>
+    <string name="txt_usuario_sesion">usuario</string>
+    <string name="txt_pasword_sesion">Contraseña</string>
+    <string name="btn_aceptar_sesion">Ingresar</string>
+    <string name="btn_cancelar_sesion">Cancelar</string>
+    <string name="btnanteriorsesion">Anterior Pagina</string>
+    <string name="string_btnanteriorsesion">\@string/btnanteriorsesion</string>
+
+    <string name="title_activity_base_de_datos">BaseDeDatos</string>
+    <string name="txt_codigo">Codigo del producto</string>
+    <string name="txt_descripcion">Descripion del producto</string>
+    <string name="txt_precio">Precio del producto</string>
+    <string name="BotonRegistrar">Registrar Producto</string>
+    <string name="BotonBuscar">Buscar Producto</string>
+    <string name="BotonEliminar">Eliminar Producto</string>
+    <string name="BotonModificar">Modificar Producto</string>
+    <string name="registrar_producto">Registrar Producto</string>
+    <string name="btnanteriorbd">Anterior Pagina</string>
+    <string name="todo">TODO</string>
+
+</resources>
