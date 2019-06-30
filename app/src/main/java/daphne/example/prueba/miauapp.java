@@ -12,9 +12,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+import daphne.example.prueba.adaptadores.adaptersAnuncios;
+import daphne.example.prueba.datainfos.dataAnuncios;
 
 public class miauapp extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private ArrayList<dataAnuncios> listdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,7 @@ public class miauapp extends AppCompatActivity
         setContentView(R.layout.activity_miauapp);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        loadComponents();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +49,31 @@ public class miauapp extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+    private void loadComponents() {
+
+            ListView list = findViewById(R.id.listview);
+
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            listdata = new ArrayList<>();
+            Integer[] images = new Integer[]{R.drawable.fondo2, R.drawable.fondo3, R.drawable.logo2, R.drawable.logo2, R.drawable.logo2};
+            String[] titles = new String[]{"AUTO", "CELULAR", "BICICLETA", "VENTILADOR", "DESPERTADOR"};
+            String[] descrip = new String[]{"vendo auto costo 25.000$ cantida 5,disponible", "vendo celular samsung costo 150bs", "vendo bicicleta costo 300bs cantidad 4, disponible", "vendo ventilador, costo 200bs, cantidad 5, disponible", "vendo despertador, costo 100bs,cantidad 10 , disponible"};
+            //ArrayList<DataInfo> listdata =new ArrayList<>();
+            for (int i = 0; i < images.length; i++) {
+                dataAnuncios info = new dataAnuncios();
+                info.setImg(images[i]);
+                info.setTitle(titles[i]);
+                info.setDescripcion(descrip[i]);
+                listdata.add(info);
+
+            }
+            adaptersAnuncios adapter = new adaptersAnuncios(this, listdata);
+
+            list.setAdapter(adapter);
+        }
+
 
     @Override
     public void onBackPressed() {

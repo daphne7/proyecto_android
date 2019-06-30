@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".descripcion_articulo"></activity>
+        <activity
+            android:name=".miauapp"
+            android:label="@string/title_activity_miauapp"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BaseDeDatos"
             android:label="@string/title_activity_base_de_datos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InciarSesion"
             android:label="@string/title_activity_inciar_sesion"

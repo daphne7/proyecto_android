@@ -32,7 +32,7 @@ public class Registro extends AppCompatActivity {
         etn = (EditText)findViewById(R.id.txt_nombre);
         eta = (EditText)findViewById(R.id.txt_apellido);
         etco =(EditText)findViewById(R.id.text_correo);
-        etu =(EditText)findViewById(R.id.txt_usurio);
+        etu =(EditText)findViewById(R.id.txt_usuario);
         etc = (EditText)findViewById(R.id.txt_password);
     }
      //metodo para el boton

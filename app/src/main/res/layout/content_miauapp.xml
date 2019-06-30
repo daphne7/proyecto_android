@@ -8,4 +8,57 @@
     tools:context=".miauapp"
     tools:showIn="@layout/app_bar_miauapp">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="389dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/anuncios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Anuncios" />
+
+        <Button
+            android:id="@+id/amigos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Amigos" />
+
+        <Button
+            android:id="@+id/favoritos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="favoritos" />
+
+        <Button
+            android:id="@+id/citas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="citas" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="395dp"
+        android:layout_height="519dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </android.support.constraint.ConstraintLayout>

@@ -51,7 +51,7 @@
         android:layout_marginStart="99dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
-        android:onClick="iniciarSesion"
+        android:onClick="irmiau"
         android:text="@string/btn_aceptar_sesion"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/button6"

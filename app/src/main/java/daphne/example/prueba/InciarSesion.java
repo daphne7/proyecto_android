@@ -34,6 +34,10 @@ public class InciarSesion extends AppCompatActivity {
     }
     //metodo para que el usuario y contrasena no queden en blanco
 
+    public void irmiau(View view){
+        Intent miau = new Intent(this, miauapp.class);
+        startActivity(miau);
+    }
     public void iniciarSesion(View view) {
 
         String Usuario = tus.getText().toString();
