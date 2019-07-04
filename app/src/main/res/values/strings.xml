@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">prueba</string>
     <string name="btnanterior">Anterior Pagina</string>
-    <string name="img1">imagen1</string>
+    <string name="img1">logouno</string>
     <string name="btn">REGISTRATE AHORA</string>
     <string name="btn2">Ya estoy registrado </string>
     <string name="title_activity_registro">Registro</string>

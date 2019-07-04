@@ -4,20 +4,31 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import daphne.example.prueba.adaptadores.adaptersAnuncios;
+import daphne.example.prueba.datainfos.dataAnuncios;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link anuncios.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link anuncios#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class anuncios extends Fragment {
+
+    private RecyclerView recyclerV ;
+    private adaptersAnuncios adapter;
+
+
+    private OnFragmentInteractionListener mListener;
+    RecyclerView recicler ;
+    ArrayList<dataAnuncios> listarecycler;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -27,21 +38,13 @@ public class anuncios extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
+  //  private OnFragmentInteractionListener mListener;
 
     public anuncios() {
-        // Required empty public constructor
+
+  //      loadComponents();
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment anuncios.
-     */
-    // TODO: Rename and change types and number of parameters
     public static anuncios newInstance(String param1, String param2) {
         anuncios fragment = new anuncios();
         Bundle args = new Bundle();
@@ -50,6 +53,7 @@ public class anuncios extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,12 +64,63 @@ public class anuncios extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_anuncios, container, false);
+ /*   private void loadComponents() {
+
+        ListView list = findViewById(R.id.listaanun);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        listdata = new ArrayList<>();
+        Integer[] images = new Integer[]{R.drawable.fondo2, R.drawable.fondo3, R.drawable.logo2, R.drawable.logo2, R.drawable.logo2};
+        String[] titles = new String[]{"AUTO", "CELULAR", "BICICLETA", "VENTILADOR", "DESPERTADOR"};
+        String[] descrip = new String[]{"vendo auto costo 25.000$ cantida 5,disponible", "vendo celular samsung costo 150bs", "vendo bicicleta costo 300bs cantidad 4, disponible", "vendo ventilador, costo 200bs, cantidad 5, disponible", "vendo despertador, costo 100bs,cantidad 10 , disponible"};
+        //ArrayList<DataInfo> listdata =new ArrayList<>();
+        for (int i = 0; i < images.length; i++) {
+            dataAnuncios info = new dataAnuncios();
+            info.setImg(images[i]);
+            info.setTitle(titles[i]);
+            info.setDescripcion(descrip[i]);
+            listdata.add(info);
+
+        }
+        adaptersAnuncios adapter = new adaptersAnuncios(this, listdata);
+
+        list.setAdapter(adapter);
+    }*/
+
+    public List<dataAnuncios> obtencion() {
+        List<dataAnuncios> datos = new ArrayList<>();
+
+       // listarecycler.add(new dataAnuncios
+       //         ("bicicleta","costo a listarecycler.add(new dataAnuncios("title", "est", R.drawable.fondo3)"));
+
+      //  listarecycler.add(new dataAnuncios
+             //   ("patines","costo a listarecycler.add(new dataAnuncios("title", "est", R.drawable.logo2)"));
+
+        listarecycler.add(new dataAnuncios("est","aqui nuestro logo lindo",R.drawable.logouno));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+      return listarecycler;
     }
+
+
+
+
+   @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                            Bundle savedInstanceState) {
+       // Inflate the layout for this fragment
+       View vista=inflater.inflate(R.layout.fragment_anuncios, container, false);
+
+       listarecycler= new ArrayList<>();
+       recicler=(RecyclerView)vista.findViewById(R.id.recicler);
+       recicler.setLayoutManager(new LinearLayoutManager(getContext()));
+       obtencion();
+       adaptersAnuncios adapter = new adaptersAnuncios(listarecycler);
+       recicler.setAdapter(adapter);
+       return vista;
+   }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -91,18 +146,11 @@ public class anuncios extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

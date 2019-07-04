@@ -5,6 +5,12 @@ public class dataAnuncios {
     private String title;
     private String descripcion;
 
+    public dataAnuncios(String title, String descripcion, int img) {
+        this.title=title;
+        this.descripcion=descripcion;
+        this.img=img;
+    }
+
     public Integer getImg() {
         return img;
     }

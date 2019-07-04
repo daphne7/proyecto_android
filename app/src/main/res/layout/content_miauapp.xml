@@ -49,16 +49,19 @@
             android:text="citas" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="337dp"
-        android:layout_height="496dp"
-        android:layout_marginStart="8dp"
+    <FrameLayout
+        android:id="@+id/contenedor"
+        android:layout_width="352dp"
+        android:layout_height="518dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

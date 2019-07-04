@@ -2,6 +2,8 @@ package daphne.example.prueba.adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,65 +13,53 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import daphne.example.prueba.R;
 import daphne.example.prueba.datainfos.dataAnuncios;
 import daphne.example.prueba.descripcion_articulo;
 
-public class adaptersAnuncios extends BaseAdapter {
+public class adaptersAnuncios  extends RecyclerView.Adapter<adaptersAnuncios.ViewHolder> {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView imganuncios;
+        TextView descripcion;
+        TextView tit;
 
-    LinearLayout relativeLayout;
-    private Context context;
-    //<dataAnuncios llama a dataAnuncios de datainfos>
-    private ArrayList<dataAnuncios> list;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
 
-    //adapters Anuncios llama a este adapter
-    public adaptersAnuncios(Context context, ArrayList<dataAnuncios> list) {
-        this.context = context;
-        this.list = list;
-
-    }
-
-    @Override
-    public int getCount() {
-        return this.list.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return position;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            LayoutInflater inflate = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflate.inflate(R.layout.itemanuncio, null);
+                    tit = itemView.findViewById(R.id.title);
+            descripcion = itemView.findViewById(R.id.descripcion);
+            imganuncios = itemView.findViewById(R.id.imganuncio);
         }
-        ImageView img = convertView.findViewById(R.id.imganuncio);
-        TextView des = convertView.findViewById(R.id.descripcion);
-        TextView title = convertView.findViewById(R.id.title);
-        relativeLayout= convertView.findViewById(R.id.listaenlace1);
-        img.setImageResource(this.list.get(position).getImg());
-        des.setText(this.list.get(position).getDescripcion());
-        title.setText(this.list.get(position).getTitle());
-
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(context, descripcion_articulo.class);
-                intent.putExtra("img",list.get(position).getImg());
-                intent.putExtra("descripcion",list.get(position).getDescripcion());
-                intent.putExtra("title",list.get(position).getTitle());
-                context.startActivity(intent);
-            }
-        });
-        return convertView;
     }
+
+    public List<dataAnuncios> listaa;
+
+    public adaptersAnuncios(List<dataAnuncios> listaa) {
+        this.listaa = listaa;
+    }
+
+    @Override
+    public adaptersAnuncios.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemanuncio, parent, false);
+        adaptersAnuncios.ViewHolder viewHolder = new adaptersAnuncios.ViewHolder(view);
+        return viewHolder;
+    }
+
+
+    @Override
+    public void onBindViewHolder(adaptersAnuncios.ViewHolder holder, int position) {
+        holder.tit.setText(listaa.get(position).getTitle());
+        holder.imganuncios.setImageResource(listaa.get(position).getImg());
+        holder.descripcion.setText(listaa.get(position).getDescripcion());
+    }
+
+    @Override
+    public int getItemCount() {
+        return listaa.size();
+    }
+
+
 }

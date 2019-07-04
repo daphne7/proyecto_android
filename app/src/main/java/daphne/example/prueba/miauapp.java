@@ -1,8 +1,10 @@
 package daphne.example.prueba;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,8 +22,16 @@ import daphne.example.prueba.adaptadores.adaptersAnuncios;
 import daphne.example.prueba.datainfos.dataAnuncios;
 
 public class miauapp extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-    private ArrayList<dataAnuncios> listdata;
+        implements NavigationView.OnNavigationItemSelectedListener,
+        anuncios.OnFragmentInteractionListener,
+        citas.OnFragmentInteractionListener,
+        favoritos.OnFragmentInteractionListener,
+        amigos.OnFragmentInteractionListener {
+
+    amigos amigos;
+    favoritos favoritos;
+    anuncios anuncios;
+    citas citas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +39,17 @@ public class miauapp extends AppCompatActivity
         setContentView(R.layout.activity_miauapp);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        loadComponents();
+
+
+
+        //perfil perfil;
+        anuncios = new anuncios();
+        favoritos = new favoritos();
+        amigos = new amigos();
+        citas = new citas();
+        //perfil= new perfil();
+        getSupportFragmentManager().beginTransaction().add(R.id.contenedor, anuncios).commit();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,29 +70,26 @@ public class miauapp extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void loadComponents() {
-
-            ListView list = findViewById(R.id.listview);
-
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            listdata = new ArrayList<>();
-            Integer[] images = new Integer[]{R.drawable.fondo2, R.drawable.fondo3, R.drawable.logo2, R.drawable.logo2, R.drawable.logo2};
-            String[] titles = new String[]{"AUTO", "CELULAR", "BICICLETA", "VENTILADOR", "DESPERTADOR"};
-            String[] descrip = new String[]{"vendo auto costo 25.000$ cantida 5,disponible", "vendo celular samsung costo 150bs", "vendo bicicleta costo 300bs cantidad 4, disponible", "vendo ventilador, costo 200bs, cantidad 5, disponible", "vendo despertador, costo 100bs,cantidad 10 , disponible"};
-            //ArrayList<DataInfo> listdata =new ArrayList<>();
-            for (int i = 0; i < images.length; i++) {
-                dataAnuncios info = new dataAnuncios();
-                info.setImg(images[i]);
-                info.setTitle(titles[i]);
-                info.setDescripcion(descrip[i]);
-                listdata.add(info);
-
-            }
-            adaptersAnuncios adapter = new adaptersAnuncios(this, listdata);
-
-            list.setAdapter(adapter);
+    /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         }
+    });
+
+    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+    NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+}
+*/
+
 
 
     @Override
@@ -107,6 +124,7 @@ public class miauapp extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    //PARA ENLAZARA BARRA IZQUIERDA
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -130,5 +148,42 @@ public class miauapp extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void clickfragments(View v) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        switch (v.getId()) {
+            case R.id.anuncios:
+                transaction.replace(R.id.contenedor, anuncios);
+                break;
+            case R.id.favoritos:
+                transaction.replace(R.id.contenedor, favoritos);
+                break;
+
+            case R.id.amigos:
+                transaction.replace(R.id.contenedor, amigos);
+                break;
+            case R.id.citas:
+                transaction.replace(R.id.contenedor, citas);
+                break;
+      /*      case R.id.btnperfil:
+                transaction.replace(R.id.contenedoroficial,perfil);*/
+        }
+        transaction.commit();
+    
+
+ /*   @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+}*/
+    }
+
+
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
