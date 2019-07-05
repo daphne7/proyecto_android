@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anuncios">
+    tools:context=".fragmentos.anuncios">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recicler"
-        android:layout_width="wrap_content"
-        android:layout_height="768dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
         tools:listitem="recicler" />
 </FrameLayout>

@@ -14,19 +14,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
-import java.util.ArrayList;
-
-import daphne.example.prueba.adaptadores.adaptersAnuncios;
-import daphne.example.prueba.datainfos.dataAnuncios;
+import daphne.example.prueba.fragmentos.amigos;
+import daphne.example.prueba.fragmentos.anuncios;
+import daphne.example.prueba.fragmentos.citas;
+import daphne.example.prueba.fragmentos.favoritos;
 
 public class miauapp extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        anuncios.OnFragmentInteractionListener,
-        citas.OnFragmentInteractionListener,
-        favoritos.OnFragmentInteractionListener,
-        amigos.OnFragmentInteractionListener {
+        daphne.example.prueba.fragmentos.anuncios.OnFragmentInteractionListener,
+        daphne.example.prueba.fragmentos.citas.OnFragmentInteractionListener,
+        daphne.example.prueba.fragmentos.favoritos.OnFragmentInteractionListener,
+        daphne.example.prueba.fragmentos.amigos.OnFragmentInteractionListener {
 
     amigos amigos;
     favoritos favoritos;
@@ -39,8 +38,6 @@ public class miauapp extends AppCompatActivity
         setContentView(R.layout.activity_miauapp);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         //perfil perfil;
         anuncios = new anuncios();
@@ -91,8 +88,30 @@ public class miauapp extends AppCompatActivity
 */
 
 
+    public void clickfragments(View v) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-    @Override
+        switch (v.getId()) {
+            case R.id.anuncios:
+                transaction.replace(R.id.contenedor, anuncios);
+                break;
+            case R.id.favoritos:
+                transaction.replace(R.id.contenedor, favoritos);
+                break;
+
+            case R.id.amigos:
+                transaction.replace(R.id.contenedor, amigos);
+                break;
+            case R.id.citas:
+                transaction.replace(R.id.contenedor, citas);
+                break;
+      /*      case R.id.btnperfil:
+                transaction.replace(R.id.contenedoroficial,perfil);*/
+        }
+        transaction.commit();
+
+    }
+        @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -131,17 +150,17 @@ public class miauapp extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.calendario) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.configuracion) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.galeria) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.noticias) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.enviar) {
 
         }
 
@@ -150,35 +169,12 @@ public class miauapp extends AppCompatActivity
         return true;
     }
 
-    public void clickfragments(View v) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        switch (v.getId()) {
-            case R.id.anuncios:
-                transaction.replace(R.id.contenedor, anuncios);
-                break;
-            case R.id.favoritos:
-                transaction.replace(R.id.contenedor, favoritos);
-                break;
-
-            case R.id.amigos:
-                transaction.replace(R.id.contenedor, amigos);
-                break;
-            case R.id.citas:
-                transaction.replace(R.id.contenedor, citas);
-                break;
-      /*      case R.id.btnperfil:
-                transaction.replace(R.id.contenedoroficial,perfil);*/
-        }
-        transaction.commit();
-    
 
  /*   @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
 }*/
-    }
 
 
 

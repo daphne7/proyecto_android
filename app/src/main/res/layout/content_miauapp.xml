@@ -10,57 +10,64 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="372dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/anuncios"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="Anuncios" />
+            android:text="Anuncios"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/amigos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="Amigos" />
+            android:text="Amigos"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/favoritos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="favoritos" />
+            android:text="favoritos"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/citas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="citas" />
+            android:text="citas"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/contenedor"
-        android:layout_width="352dp"
-        android:layout_height="518dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="0dp"
+        android:layout_height="524dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.526">
 
     </FrameLayout>
 

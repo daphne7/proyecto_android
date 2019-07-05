@@ -1,4 +1,4 @@
-package daphne.example.prueba;
+package daphne.example.prueba.fragmentos;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import daphne.example.prueba.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link amigos.OnFragmentInteractionListener} interface
+ * {@link favoritos.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link amigos#newInstance} factory method to
+ * Use the {@link favoritos#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class amigos extends Fragment {
+public class favoritos extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class amigos extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public amigos() {
+    public favoritos() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class amigos extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment amigos.
+     * @return A new instance of fragment favoritos.
      */
     // TODO: Rename and change types and number of parameters
-    public static amigos newInstance(String param1, String param2) {
-        amigos fragment = new amigos();
+    public static favoritos newInstance(String param1, String param2) {
+        favoritos fragment = new favoritos();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +66,7 @@ public class amigos extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_amigos, container, false);
+        return inflater.inflate(R.layout.fragment_favoritos, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

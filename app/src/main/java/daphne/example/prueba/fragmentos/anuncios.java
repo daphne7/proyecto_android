@@ -1,4 +1,4 @@
-package daphne.example.prueba;
+package daphne.example.prueba.fragmentos;
 
 import android.content.Context;
 import android.net.Uri;
@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import daphne.example.prueba.R;
 import daphne.example.prueba.adaptadores.adaptersAnuncios;
 import daphne.example.prueba.datainfos.dataAnuncios;
 
@@ -97,10 +96,16 @@ public class anuncios extends Fragment {
       //  listarecycler.add(new dataAnuncios
              //   ("patines","costo a listarecycler.add(new dataAnuncios("title", "est", R.drawable.logo2)"));
 
-        listarecycler.add(new dataAnuncios("est","aqui nuestro logo lindo",R.drawable.logouno));
+        listarecycler.add(new dataAnuncios("est","aqui nuestro logo lindo", R.drawable.logouno));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
+
       return listarecycler;
     }
 
