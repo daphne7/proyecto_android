@@ -26,7 +26,8 @@
             android:layout_width="70dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="Anuncios"
+            android:onClick="onClick"
+            android:text="@string/anuncios"
             android:textSize="10sp" />
 
         <Button
@@ -34,7 +35,8 @@
             android:layout_width="70dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="Amigos"
+            android:onClick="onClick"
+            android:text="@string/amigos"
             android:textSize="10sp" />
 
         <Button
@@ -42,7 +44,8 @@
             android:layout_width="70dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="favoritos"
+            android:onClick="onClick"
+            android:text="@string/favoritos"
             android:textSize="10sp" />
 
         <Button
@@ -50,7 +53,8 @@
             android:layout_width="70dp"
             android:layout_height="37dp"
             android:layout_weight="1"
-            android:text="citas"
+            android:onClick="onClick"
+            android:text="@string/citas"
             android:textSize="10sp" />
     </LinearLayout>
 

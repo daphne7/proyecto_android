@@ -1,5 +1,6 @@
 package daphne.example.prueba;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.HashMap;
 
 import daphne.example.prueba.fragmentos.amigos;
 import daphne.example.prueba.fragmentos.anuncios;
@@ -48,7 +51,7 @@ public class miauapp extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().add(R.id.contenedor, anuncios).commit();
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+ /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +59,8 @@ public class miauapp extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+*/
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -86,31 +91,6 @@ public class miauapp extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 }
 */
-
-
-    public void clickfragments(View v) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        switch (v.getId()) {
-            case R.id.anuncios:
-                transaction.replace(R.id.contenedor, anuncios);
-                break;
-            case R.id.favoritos:
-                transaction.replace(R.id.contenedor, favoritos);
-                break;
-
-            case R.id.amigos:
-                transaction.replace(R.id.contenedor, amigos);
-                break;
-            case R.id.citas:
-                transaction.replace(R.id.contenedor, citas);
-                break;
-      /*      case R.id.btnperfil:
-                transaction.replace(R.id.contenedoroficial,perfil);*/
-        }
-        transaction.commit();
-
-    }
         @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -155,7 +135,8 @@ public class miauapp extends AppCompatActivity
         } else if (id == R.id.configuracion) {
 
         } else if (id == R.id.galeria) {
-
+            Intent publicar = new Intent(this, BaseDeDatos.class);
+            startActivity(publicar);
         } else if (id == R.id.noticias) {
 
         } else if (id == R.id.nav_share) {
@@ -178,8 +159,39 @@ public class miauapp extends AppCompatActivity
 
 
 
+        public void onClick(View v) {
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            switch (v.getId()) {
+                case R.id.anuncios:
+                    transaction.replace(R.id.contenedor, anuncios);
+                    break;
+
+                case R.id.favoritos:
+                    transaction.replace(R.id.contenedor, favoritos);
+                    break;
+
+                case R.id.amigos:
+                    transaction.replace(R.id.contenedor, amigos);
+                    break;
+
+                case R.id.citas:
+                    transaction.replace(R.id.contenedor, citas);
+                    break;
+      /*      case R.id.btnperfil:
+                transaction.replace(R.id.contenedoroficial,perfil);*/
+            }
+            transaction.commit();
+
+        }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
-}
+};
+
+
+
+

@@ -18,6 +18,8 @@ import java.util.List;
 import daphne.example.prueba.R;
 import daphne.example.prueba.datainfos.dataAnuncios;
 import daphne.example.prueba.descripcion_articulo;
+import daphne.example.prueba.fragmentos.anuncios;
+import daphne.example.prueba.miauapp;
 
 public class adaptersAnuncios  extends RecyclerView.Adapter<adaptersAnuncios.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -55,6 +57,10 @@ public class adaptersAnuncios  extends RecyclerView.Adapter<adaptersAnuncios.Vie
         holder.imganuncios.setImageResource(listaa.get(position).getImg());
         holder.descripcion.setText(listaa.get(position).getDescripcion());
     }
+
+
+
+
 
     @Override
     public int getItemCount() {

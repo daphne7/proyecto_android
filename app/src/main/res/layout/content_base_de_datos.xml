@@ -41,13 +41,14 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="108dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/txt_codigo"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -94,51 +95,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_precio" />
 
-    <Button
-        android:id="@+id/BotonBuscar"
-        android:layout_width="212dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="109dp"
-        android:onClick="Buscar"
-        android:text="@string/BotonBuscar"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="230dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:srcCompat="@drawable/boton" />
 
     <Button
-        android:id="@+id/BotonEliminar"
-        android:layout_width="209dp"
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="113dp"
-        android:onClick="Eliminar"
-        android:text="@string/BotonEliminar"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginBottom="8dp"
+        android:text="buscarfoto"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotonBuscar" />
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/BotonModificar"
-        android:layout_width="202dp"
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="119dp"
-        android:onClick="Modificar"
-        android:text="@string/BotonModificar"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotonEliminar" />
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
 </android.support.constraint.ConstraintLayout>

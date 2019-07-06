@@ -31,11 +31,11 @@
     <string name="string_btnanteriorsesion">\@string/btnanteriorsesion</string>
 
     <string name="title_activity_base_de_datos">BaseDeDatos</string>
-    <string name="txt_codigo">Codigo del producto</string>
-    <string name="txt_descripcion">Descripion del producto</string>
+    <string name="txt_codigo">Descripcion del producto</string>
+    <string name="txt_descripcion">Cantidad del producto</string>
     <string name="txt_precio">Precio del producto</string>
     <string name="BotonRegistrar">Registrar Producto</string>
-    <string name="BotonBuscar">Buscar Producto</string>
+ <!--!   <string name="BotonBuscar">Buscar Producto</string>-->
     <string name="BotonEliminar">Eliminar Producto</string>
     <string name="BotonModificar">Modificar Producto</string>
     <string name="registrar_producto">Registrar Producto</string>
@@ -48,6 +48,13 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!--!   para activity miau app los botones-->
+    <string name="anuncios">Anuncios</string>
+    <string name="amigos">Amigos</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="citas">Citas</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
