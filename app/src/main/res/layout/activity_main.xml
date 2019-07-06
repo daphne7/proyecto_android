@@ -50,6 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logouno" />
+        app:srcCompat="@drawable/gato" />
 
 </android.support.constraint.ConstraintLayout>

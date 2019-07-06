@@ -96,7 +96,7 @@ public class anuncios extends Fragment {
       //  listarecycler.add(new dataAnuncios
              //   ("patines","costo a listarecycler.add(new dataAnuncios("title", "est", R.drawable.logo2)"));
 
-        listarecycler.add(new dataAnuncios("est","aqui nuestro logo lindo", R.drawable.logouno));
+        listarecycler.add(new dataAnuncios("esta es el titulo","aqui nuestro logo lindo", R.drawable.logouno));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
         listarecycler.add(new dataAnuncios("est","esaz",R.drawable.logo2));
