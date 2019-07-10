@@ -6,43 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".fragmentos.amigos">
 
-    <ScrollView
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recicler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
 
-            <ImageButton
-                android:id="@+id/amigo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#E1BEE7"
-                android:src="@drawable/amigos" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#7C4DFF"
-                android:src="@drawable/amigos" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#E1BEE7"
-                android:src="@drawable/amigos" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#7C4DFF"
-                android:src="@drawable/amigos" />
-        </LinearLayout>
-    </ScrollView>
+        tools:listitem="recicler" />
 
 </FrameLayout>
+
+

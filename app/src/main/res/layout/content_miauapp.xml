@@ -28,7 +28,8 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="@string/anuncios"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+           />
 
         <Button
             android:id="@+id/amigos"
