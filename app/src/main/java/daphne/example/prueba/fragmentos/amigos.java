@@ -65,9 +65,9 @@ public class amigos extends Fragment {
         List<dataAmigos> datos = new ArrayList<>();
 
         listarecycler.add(new dataAmigos("esta es el titulo","aqui nuestro logo lindo", R.drawable.logouno));
+        listarecycler.add(new dataAmigos("est","esaz",R.drawable.logouno));
         listarecycler.add(new dataAmigos("est","esaz",R.drawable.logo2));
-        listarecycler.add(new dataAmigos("est","esaz",R.drawable.logo2));
-        listarecycler.add(new dataAmigos("est","esaz",R.drawable.logo2));
+        listarecycler.add(new dataAmigos("est","esaz",R.drawable.logouno));
         listarecycler.add(new dataAmigos("est","esaz",R.drawable.logo2));
 
 
@@ -121,14 +121,6 @@ public class amigos extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
-
-
-
-
-
-
 
 
 }

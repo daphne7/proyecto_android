@@ -11,13 +11,13 @@ import android.widget.TextView;
 import java.util.List;
 
 import daphne.example.prueba.R;
-import daphne.example.prueba.datainfos.dataAmigos;
+import daphne.example.prueba.datainfos.dataCita;
 
+public class adaptersCitas extends RecyclerView.Adapter<adaptersCitas.ViewHolder> {
 
-public class adaptersamigos extends RecyclerView.Adapter<adaptersamigos.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgamigos;
+        ImageView imgcitas;
         TextView descripcion;
         TextView tit;
 
@@ -26,33 +26,34 @@ public class adaptersamigos extends RecyclerView.Adapter<adaptersamigos.ViewHold
 
             tit = itemView.findViewById(R.id.title);
             descripcion = itemView.findViewById(R.id.descripcion);
-            imgamigos = itemView.findViewById(R.id.imgamigo);
+            imgcitas = itemView.findViewById(R.id.imgcita);
         }
     }
-    public List<dataAmigos> listaa;
-    public adaptersamigos(List<dataAmigos> listaa) { this.listaa = listaa; }
 
-    @Override
-    public adaptersamigos.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemamigos, parent, false);
-        adaptersamigos.ViewHolder viewHolder = new adaptersamigos.ViewHolder(view);
-        return viewHolder;
-
+    public List<dataCita> listaa;
+    public adaptersCitas(List<dataCita> listaa) {
+        this.listaa = listaa;
     }
 
-    /*public void onBindViewHolder(adaptersAnuncios.ViewHolder holder, int position)*/
+    @Override
+    public adaptersCitas.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemcita, parent, false);
+        adaptersCitas.ViewHolder viewHolder = new adaptersCitas.ViewHolder(view);
+        return viewHolder;
+    }
+
 
     @Override
-    public void onBindViewHolder(adaptersamigos.ViewHolder holder, int position) {
+    public void onBindViewHolder(adaptersCitas.ViewHolder holder, int position) {
         holder.tit.setText(listaa.get(position).getTitle());
-        holder.imgamigos.setImageResource(listaa.get(position).getImg());
+        holder.imgcitas.setImageResource(listaa.get(position).getImg());
         holder.descripcion.setText(listaa.get(position).getDescripcion());
     }
+
 
     @Override
     public int getItemCount() {
         return listaa.size();
     }
-
 
 }

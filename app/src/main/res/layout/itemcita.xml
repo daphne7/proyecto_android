@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    xmlns:tools="http://schemas.android.com/tools"
     android:textColor="#9C27B0"
     tools:layout_editor_absoluteY="81dp">
-
 
     <android.support.v7.widget.CardView
         android:layout_width="356dp"
@@ -47,7 +46,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imgamigo"
+                android:id="@+id/imgcita"
                 android:layout_width="51dp"
                 android:layout_height="89dp"
                 android:layout_weight="1"
@@ -55,4 +54,6 @@
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+
 </android.support.constraint.ConstraintLayout>

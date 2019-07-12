@@ -35,14 +35,14 @@ public class InciarSesion extends AppCompatActivity {
     //metodo para que el usuario y contrasena no queden en blanco
 
     public void irmiau(View view){
-        Intent miau = new Intent(this, miauapp.class);
-        startActivity(miau);
+        Intent irmiau = new Intent(this, miauapp.class);
+        startActivity(irmiau);
     }
     public void iniciarSesion(View view) {
 
         String Usuario = tus.getText().toString();
         String password = tcs.getText().toString();
-        //mensaje para llenar el formulario
+        //mensaje de adbertencia para llenar el formulario
         if (Usuario.length() == 0) {
             Toast.makeText(this, "debes llenar el campo del usuario", Toast.LENGTH_LONG).show();
         }

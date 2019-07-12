@@ -38,7 +38,6 @@ public class adaptersAnuncios  extends RecyclerView.Adapter<adaptersAnuncios.Vie
     }
 
     public List<dataAnuncios> listaa;
-
     public adaptersAnuncios(List<dataAnuncios> listaa) {
         this.listaa = listaa;
     }
@@ -57,9 +56,6 @@ public class adaptersAnuncios  extends RecyclerView.Adapter<adaptersAnuncios.Vie
         holder.imganuncios.setImageResource(listaa.get(position).getImg());
         holder.descripcion.setText(listaa.get(position).getDescripcion());
     }
-
-
-
 
 
     @Override
