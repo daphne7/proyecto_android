@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Registro extends AppCompatActivity {
 
-    private EditText etn, eta,etco, etu, etc;
+    private EditText etn, eta, etco, etc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class Registro extends AppCompatActivity {
         etn = (EditText)findViewById(R.id.txt_nombre);
         eta = (EditText)findViewById(R.id.txt_apellido);
         etco =(EditText)findViewById(R.id.text_correo);
-        etu =(EditText)findViewById(R.id.txt_usuario);
+        //etu =(EditText)findViewById(R.id.txt_usuario);
         etc = (EditText)findViewById(R.id.txt_password);
     }
      //metodo para el boton
@@ -40,7 +40,7 @@ public class Registro extends AppCompatActivity {
         String nombre = etn.getText().toString();
         String apellido=eta.getText().toString();
         String correo=etco.getText().toString();
-        String usuario=etu.getText().toString();
+        //String usuario=etu.getText().toString();
         String password=etc.getText().toString();
 
 
@@ -51,9 +51,10 @@ public class Registro extends AppCompatActivity {
             Toast.makeText(this,"debes llenar el campo del apellido",Toast.LENGTH_LONG).show();
         }if (correo.length()==0){
             Toast.makeText(this,"debes llenar el correo",Toast.LENGTH_LONG).show();
-        }if (usuario.length()==0){
-            Toast.makeText(this,"debes llenar el campo del usuario", Toast.LENGTH_LONG).show();
-        }if (password.length()==0) {
+        }
+        /*if (usuario.length()==0){
+            Toast.makeText(this,"debes llenar el campo del usuario", Toast.LENGTH_LONG).show()};*/
+        if (password.length()==0) {
             Toast.makeText(this, "debes llenar el campo de la contraseña", Toast.LENGTH_LONG).show();
         }if (nombre.length()!= 0 && nombre.length() != 0 &&apellido.length() != 0 && correo.length() != 0 && password.length() != 0){
             Toast.makeText(this,"registro en proceso...",Toast.LENGTH_LONG).show();

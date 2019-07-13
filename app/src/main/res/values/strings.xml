@@ -1,4 +1,5 @@
 <resources>
+    <!-- primer contenido -->
     <string name="app_name">MiauApp</string>
     <string name="btnanterior">Anterior Pagina</string>
     <string name="img1">logouno</string>
@@ -7,12 +8,13 @@
     <string name="title_activity_registro">Registro</string>
     <string name="title_activity_iniciarSesion">Registro</string>
 
+    <!-- contenido registro -->
     <string name="textView">Registrate</string>
     <string name="txt_nombre">Nombre</string>
     <string name="txt_apelllido">Apellidos</string>
     <string name="txt_correo">Correo Electronico </string>
-    <string name="txt_usuario">Usuario</string>
     <string name="txt_password">Contraseña</string>
+    <!--<string name="txt_usuario">repetir contraseña</string> -->
 
     <string name="btn3">Aceptar</string>
     <string name="btn4">Cancelar </string>
@@ -21,6 +23,7 @@
     <string name="correo_electronico">Correo Electronico</string>
     <string name="password">Contrasena</string>
 
+    <!-- contenido iniciar sesion -->
     <string name="title_activity_inciar_sesion">InciarSesion</string>
     <string name="ini_sesion">Iniciar Sesion</string>
     <string name="txt_usuario_sesion">usuario</string>
@@ -58,5 +61,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_chat_usuario">chatUsuario</string>
+    <string name="daphne">daphne</string>
+    <string name="title_activity_chat">chat</string>
 
 </resources>

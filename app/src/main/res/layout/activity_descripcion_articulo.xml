@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo8"
     tools:context=".descripcion_articulo">
 
     <ImageView
@@ -16,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/alert_dark_frame" />
+        app:srcCompat="@drawable/bici" />
+    <!--  app:srcCompat="@android:drawable/alert_dark_frame" -->
 
     <TextView
         android:id="@+id/textView2"
