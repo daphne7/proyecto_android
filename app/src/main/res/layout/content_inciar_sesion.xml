@@ -30,7 +30,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/txt_usuario_sesion"
+        android:id="@+id/email_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password_sesion"
+        app:layout_constraintTop_toBottomOf="@+id/password_txt"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -68,7 +68,7 @@
         android:layout_marginEnd="72dp"
         android:text="@string/btn_cancelar_sesion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password_sesion"
+        app:layout_constraintTop_toBottomOf="@+id/password_txt"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -84,7 +84,7 @@
         tools:layout_editor_absoluteX="29dp" />
 
     <EditText
-        android:id="@+id/txt_password_sesion"
+        android:id="@+id/password_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -96,6 +96,6 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_usuario_sesion"
+        app:layout_constraintTop_toBottomOf="@+id/email_txt"
         tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

@@ -19,7 +19,7 @@
     <string name="btn3">Aceptar</string>
     <string name="btn4">Cancelar </string>
 
-    <string name="nombre">Nombre</string>
+    <string name="sex">sexo</string>
     <string name="correo_electronico">Correo Electronico</string>
     <string name="password">Contrasena</string>
 
@@ -64,5 +64,6 @@
     <string name="title_activity_chat_usuario">chatUsuario</string>
     <string name="daphne">daphne</string>
     <string name="title_activity_chat">chat</string>
+    <string name="title_activity_login">login</string>
 
 </resources>
