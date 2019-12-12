@@ -57,6 +57,8 @@ Button aceptar,cancelar;
         aceptar= findViewById(R.id.aceptar);
         cancelar= findViewById(R.id.cancelar);
 
+
+
        /* AsyncHttpClient registro= new AsyncHttpClient();
         RequestParams params = new RequestParams();
         params.add("txt_nombre", etn.getText().toString());
@@ -73,8 +75,6 @@ Button aceptar,cancelar;
 
 
                     public void onFailure(int statusCode, Header[] headers, JSONObject response) {
-
-
                     }
 
                 });
@@ -100,11 +100,17 @@ Button aceptar,cancelar;
         EditText etc = findViewById(R.id.txt_password);
         Spinner sexs = findViewById(R.id.sex);
 
+
+
         AsyncHttpClient registro= new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.add("txt_nombre", etn.getText().toString());
+        params.add("txt_apellido", eta.getText().toString());
+        params.add("txt_correo", etco.getText().toString());
+        params.add("txt_password", etc.getText().toString());
+
        //agregando parametros
         RequestParams params = new RequestParams();
-
-
         params.add("txt_nombre", etn.getText().toString());
         params.add("txt_apellido", eta.getText().toString());
         params.add("txt_correo", etco.getText().toString());

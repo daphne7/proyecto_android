@@ -140,6 +140,7 @@ DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
         if (id == R.id.calendario) {
             // Handle the camera action
         } else if (id == R.id.configuracion) {
